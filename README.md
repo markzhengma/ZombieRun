@@ -7,6 +7,7 @@ https://markzhengma.itch.io/zombierun
 A third-person RPG game built with Unity engine. Play as a zombie and try to experience how zombie feels when human beings are trying so hard to kill them.
 
 ## Screenshots
+![screenshot](./ReadMe/process.png)
 ![screenshot](./ReadMe/1.png)
 ![screenshot](./ReadMe/2.png)
 ![screenshot](./ReadMe/3.png)
