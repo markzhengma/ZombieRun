@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour {
 	public GameObject Portal;
 	public GameObject ReplayBtn;
 
+	public AudioSource awakeSound;
+	public AudioSource deadSound;
+	public AudioSource collectSound;
+	public AudioSource winSound;
+
 	// private GameObject[] enemies;
 
 	void Start ()
@@ -36,6 +41,8 @@ public class PlayerController : MonoBehaviour {
 		winText.text = "";
 		PickUps = GameObject.FindGameObjectsWithTag("Pick Up");
 		anim.SetBool("isIdle", true);
+
+		awakeSound.Play();
 
 		// enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		// StartCoroutine(ActivateEnemy());
@@ -135,6 +142,15 @@ public class PlayerController : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
+
+			if (count < PickUps.Length)
+			{
+				collectSound.Play();
+			}
+			else
+			{
+				winSound.Play();
+			}
 		}
 	}
 
@@ -172,6 +188,8 @@ public class PlayerController : MonoBehaviour {
 
 			anim.SetBool("isDie", true);
 			rb.velocity = Vector3.zero;
+
+			deadSound.Play();
 		}
 		if (other.gameObject.CompareTag ("Ground"))
 		{
