@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "ZombieRun.data.unityweb",
+"asmCodeUrl": "ZombieRun.asm.code.unityweb",
+"asmMemoryUrl": "ZombieRun.asm.memory.unityweb",
+"asmFrameworkUrl": "ZombieRun.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
